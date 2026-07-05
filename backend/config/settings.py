@@ -69,6 +69,7 @@ CORS_ALLOWED_ORIGINS = [
 
 CSRF_TRUSTED_ORIGINS = [
     "https://dropai-ten.vercel.app",
+     "https://dropai.sbs",
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
