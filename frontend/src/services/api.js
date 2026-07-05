@@ -1,10 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-  // Sirf ye URL change karna hai:
-  baseURL: 'https://dropai-1-geqa.onrender.com/', 
+  baseURL: "https://dropai-1-geqa.onrender.com/api/",
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
