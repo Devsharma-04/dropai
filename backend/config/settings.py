@@ -61,3 +61,9 @@ USE_I18N = True
 USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 APPEND_SLASH = False
+
+# settings.py mein ye zarur hona chahiye
+CORS_ALLOWED_ORIGINS = [
+    "https://dropai-ten.vercel.app", 
+]
+CORS_ALLOW_ALL_ORIGINS = True
