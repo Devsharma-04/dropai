@@ -61,3 +61,8 @@ USE_I18N = True
 USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 APPEND_SLASH = False
+
+CORS_ALLOWED_ORIGINS = [
+    "https://your-frontend-app-name.onrender.com", # Apne Frontend ka Render URL yahan daalo
+]
+CORS_ALLOW_ALL_ORIGINS = True # Test karne ke liye ye chalega, lekin baad mein upar wali line set karna
