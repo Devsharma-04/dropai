@@ -1,0 +1,15 @@
+{
+  "name": "Drop AI",
+  "short_name": "Drop",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#11141a",
+  "theme_color": "#11141a",
+  "icons": [
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
