@@ -62,17 +62,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 APPEND_SLASH = False
 
 # settings.py mein ye zarur hona chahiy
-
-CORS_ALLOWED_ORIGINS = [
-    "https://dropai-ten.vercel.app",
-]
+# CORS
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = False
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://dropai.sbs",
     "https://dropai-ten.vercel.app",
-     "https://dropai.sbs",
 ]
-CORS_ALLOW_ALL_ORIGINS = True
-
 
 TEMPLATES = [
     {
