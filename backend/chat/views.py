@@ -13,24 +13,21 @@ class ChatAPIView(APIView):
         if not user_message:
             return StreamingHttpResponse(iter(["Error: Message is empty"]), content_type="text/plain")
 
-        # Gemni service call
         response_generator = ask_gemini_stream(user_message, session_id=session_id)
 
-        # Streaming response setup
         response = StreamingHttpResponse(response_generator, content_type="text/plain")
         
-        # CORS & Streaming Headers (Production fix)
+        # Headers to prevent CORS blocking
         response['X-Accel-Buffering'] = 'no'
-        response['Access-Control-Allow-Origin'] = 'https://dropai-ten.vercel.app'
+        response['Access-Control-Allow-Origin'] = '*'
         response['Access-Control-Allow-Methods'] = 'POST, OPTIONS'
         response['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, X-Requested-With'
         
         return response
 
-    # Preflight request handle karne ke liye (OPTIONS method)
     def options(self, request, *args, **kwargs):
         response = super().options(request, *args, **kwargs)
-        response['Access-Control-Allow-Origin'] = 'https://dropai-ten.vercel.app'
+        response['Access-Control-Allow-Origin'] = '*'
         response['Access-Control-Allow-Methods'] = 'POST, OPTIONS'
         response['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, X-Requested-With'
         return response
