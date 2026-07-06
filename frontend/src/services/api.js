@@ -1,9 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://dropai-backend.onrender.com/api/",
+  // Yeh hai aapka NAYA Backend URL
+  baseURL: 'https://dropai-1-geqa.onrender.com/', 
   headers: {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
   },
 });
 
