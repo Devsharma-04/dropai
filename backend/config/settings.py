@@ -49,8 +49,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # --- CLEANED CORS SETTINGS ---
 
 CORS_ALLOWED_ORIGINS = [
-    "https://dropai-h36dekm2i-dev-dev.vercel.app", 
-    "https://www.dropai.sbs", # Aapki main domain
+    "https://dropai.sbs",
+    "https://www.dropai.sbs",
+    "https://dropai-nine.vercel.app",# Aapki main domain
 ]
 
 # Ya agar sab allow karna hai (Testing ke liye):
