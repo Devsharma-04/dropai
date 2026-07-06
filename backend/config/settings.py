@@ -71,6 +71,11 @@ CSRF_TRUSTED_ORIGINS = [
     "https://dropai-ten.vercel.app",
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://www.dropai.sbs",
+    "https://dropai.sbs",
+]
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
