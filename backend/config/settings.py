@@ -47,11 +47,16 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # --- CLEANED CORS SETTINGS ---
-CORS_ALLOW_ALL_ORIGINS = False  # False rakho kyunki humne specific domains di hain
+
 CORS_ALLOWED_ORIGINS = [
-    "https://www.dropai.sbs",
-    "https://dropai.sbs", # Vercel dev URL bhi rehne do testing ke liye
+    "https://dropai-h36dekm2i-dev-dev.vercel.app", 
+    "https://www.dropai.sbs", # Aapki main domain
 ]
+
+# Ya agar sab allow karna hai (Testing ke liye):
+CORS_ALLOW_ALL_ORIGINS = True
+
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = ["GET", "POST", "OPTIONS", "PUT", "DELETE"]
 CORS_ALLOW_HEADERS = [
