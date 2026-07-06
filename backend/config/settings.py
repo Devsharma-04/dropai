@@ -11,6 +11,7 @@ DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
+    'django.contrib.admin', # Admin add kar lo, kaam aata hai
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -22,7 +23,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    "corsheaders.middleware.CorsMiddleware",
+    "corsheaders.middleware.CorsMiddleware", # Sabse upar
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -45,36 +46,27 @@ DATABASES = {
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# CORS Settings
-CORS_ALLOW_ALL_ORIGINS = True
+# --- CLEANED CORS SETTINGS ---
+CORS_ALLOW_ALL_ORIGINS = False  # False rakho kyunki humne specific domains di hain
+CORS_ALLOWED_ORIGINS = [
+    "https://www.dropai.sbs",
+    "https://dropai.sbs",
+    "https://dropai-ten.vercel.app", # Vercel dev URL bhi rehne do testing ke liye
+]
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = ["GET", "POST", "OPTIONS", "PUT", "DELETE"]
 CORS_ALLOW_HEADERS = [
     "accept", "authorization", "content-type", 
     "user-agent", "x-csrftoken", "x-requested-with",
 ]
-CORS_ALLOW_CREDENTIALS = True
+# ------------------------------
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.BigAutoField'
 APPEND_SLASH = False
-
-# settings.py mein ye zarur hona chahiy
-# CORS
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = False
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://dropai.sbs",
-    "https://dropai-ten.vercel.app",
-]
-
-CORS_ALLOWED_ORIGINS = [
-    "https://www.dropai.sbs",
-    "https://dropai.sbs",
-]
 
 TEMPLATES = [
     {
