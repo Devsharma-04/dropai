@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://dropai-1-geqa.onrender.com/api/", // Prefix `/api/` added
+  baseURL: "https://dropai-1-geqa.onrender.com/chat/", // Prefix `/api/` added
   headers: {
     "Content-Type": "application/json",
   },
